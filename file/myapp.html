@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi">
+<meta charset="utf-8">
+<head>
+<title>Ycitus的文件下载</title>
+<style type="text/css">
+<!--
+@import url('style/style.css');
+-->
+</style>
+</head>
+<body>
+
+	<div class="div_wrapper">
+		<h2>我的APP</h2>
+		
+		<div style="display:block; margin-top: 0.5em;">
+		文件类型:
+
+		<form action = "" method = "get" style="display: inline; width: auto;">
+			<select name="filename" onchange="window.location=this.value">
+					<option value="myapp.html" selected="selected">我的APP</option>
+					<option value="mc.html">MC整合包</option>
+			</select>
+		</form>
+		</div>
+
+		<div class="div_mc_ver">
+			<h3 class="h_mc_ver">游戏</h3>
+			<table>
+				<tr class="tr_header">
+					<td>名称</td>
+					<td>版本</td>
+					<td class="td_download">下载</td>
+					<td>更新日期</td>
+				</tr>
+				<tr class="tr_mod_entry_even">
+					<td><a style="cursor:pointer">Let`s go fishing</a></td>
+					<td>1.0</td>
+					<td><a onclick="error()" style="cursor:pointer">Download</a></td>
+					<td>2020-05-07 20:49:30</td>
+				</tr>
+			</table>
+		</div> <!-- div_mc_ver -->
+		<div class="div_mc_ver">
+			<h3 class="h_mc_ver">日常软件</h3>
+			<table>
+				<tr class="tr_header">
+					<td>名称</td>
+					<td>版本</td>
+					<td class="td_download">下载</td>
+					<td>更新日期</td>
+				</tr>
+				<tr class="tr_mod_entry_even">
+					<td><a style="cursor:pointer">生成器合集</a></td>
+					<td>1.0</td>
+					<td><a onclick="error()" style="cursor:pointer">Download</a></td>
+					<td>2020-05-07 20:49:30</td>
+				</tr>
+			</table>
+		</div> <!-- div_mc_ver -->
+
+	</div> <!-- wrapper -->
+	<script src="../js/box.js"></script>
+
+</body>
+</html>

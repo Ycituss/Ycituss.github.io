@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Ycitus的网站</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="theme-color" content="#222325">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#222325">
+	<meta name="msapplication-navbutton-color" content="#222325">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Tomotoes/font/font.min.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1757686_dr8a0env97k.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta http-equiv="x-dns-prefetch-control" content="on">
+	<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+	<link rel="prefetch" href="https://cdn.jsdelivr.net/">
+	<meta name="description" content="Author:Ycitus,Category:Personal Web">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+</html>
+
+<body>
+	<main>
+		<div class="content content-intro">
+			<div class="content-inner"><canvas id="background"></canvas>
+				<div class="wrap fade">
+					<h2 class="content-title">Ycitus</h2>
+					<h3 class="content-subtitle" original-content="A student of Beijing Institute of Technology">&nbsp;
+					</h3><a class="enter">enter</a>
+					<div class="arrow arrow-1"></div>
+					<div class="arrow arrow-2"></div>
+				</div>
+			</div>
+			<div class="shape-wrap"><svg class="shape" width="100%" height="100vh" preserveAspectRatio="none"
+					viewBox="0 0 1440 800" xmlns:pathdata="http://www.codrops.com/">
+					<path
+						d="M-44-50C-52.71 28.52 15.86 8.186 184 14.69 383.3 22.39 462.5 12.58 638 14 835.5 15.6 987 6.4 1194 13.86 1661 30.68 1652-36.74 1582-140.1 1512-243.5 15.88-589.5-44-50Z"
+						pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z">
+					</path>
+				</svg></div>
+		</div>
+		<div class="content content-main">
+			<div id="page">
+				<div id="card">
+					<div class="card-inner fade">
+						<header><img src="assets/avatar.jpg" width="80" height="80" alt="avatar">
+							<h1 data-translate="name">Ycitus</h1>
+							<a href="http://www.bit.edu.cn" style="text-decoration: none;" target="_blank">
+								<h2 id="signature" data-translate="signature" original-content="上网不涉密，涉密不上网"></h2>
+							</a>
+						</header>
+						<ul>
+							<li id="whole-first"><a href="https://me.csdn.net/qq_43106321" target="_blank"
+									aria-label="CSDN"><i class="iconfont icon-bokeyuan"></i><span
+										data-translate="CSDN">CSDN</span></a></li>
+							<li id="whole-second"><a href="https://space.bilibili.com/148142151" target="_blank"
+									aria-label="bilibili"><i class="iconfont icon-bilibili"></i><span
+										data-translate="bilibili">bilibili</span></a></li>
+							<li id="half-first"><a href="mailto:2799282971@qq.com" aria-label="我的邮箱" target="_blank"><i
+										class="iconfont icon-email"></i><span data-translate="我的邮箱">我的邮箱</span></a></li>
+							<li class="quarter" id="quarter-first"><a aria-label="QQ"><i
+										class="iconfont icon-qq"></i><img src="assets/qq.jpg" height="95" width="95"
+										alt="QQ"></a></li>
+							<li class="quarter" id="quarter-second"><a href="file/mc.html" target="_blank"
+									rel="noopener" aria-label="文件"><i class="iconfont icon-files2"></i><span
+										data-translate="文件">文件</span></a></li>
+							<li class="quarter" id="quarter-third"><a href="game/index.html" target="_blank"
+									rel="noopener" aria-label="游戏"><i class="iconfont icon-game"></i><span
+										data-translate="游戏">游戏</span></a></li>
+							<li class="quarter" id="quarter-fourth"><a href="other/index.html" target="blank" aria-label="other"><i
+										class="iconfont icon-fm-i-other"></i></a></li>
+						</ul>
+						<hr>
+						<div class="copyright">
+							<p style="color: black;text-align: center;">Copyright &copy; 2020.This web page is not original. The original author: <a style="color: black" href="https://tomotoes.com/blog/" target="_blank">Simon Ma</a></p>
+							<!--原项目地址（作者删帖了╰(*°▽°*)╯）  - <a style="color: black" href="https://tomotoes.com/blog/open-source-homepage-for-tomotoes/" target="_blank">Project Address</a> -->
+							<p style="color: black;text-align: center;">备案号:		<a href="http://beian.miit.gov.cn" title="工信部主页" target="_blank" style="color: black;">京ICP备20014989号-1</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/animejs@3.1.0/lib/anime.min.js"></script>
+		<script>window.$ = selector => document.querySelector(selector)
+			const getOriginalContent = selector => $(selector).getAttribute("original-content")
+			window.subtitle = getOriginalContent(".content-subtitle")
+			window.signature = getOriginalContent("#signature")
+			window.config = {
+				SIM_RESOLUTION: 128,
+				DYE_RESOLUTION: 1024,
+				CAPTURE_RESOLUTION: 512,
+				DENSITY_DISSIPATION: 1,
+				VELOCITY_DISSIPATION: 0.2,
+				PRESSURE: 0.8,
+				PRESSURE_ITERATIONS: 20,
+				CURL: 30,
+				SPLAT_RADIUS: 0.25,
+				SPLAT_FORCE: 6000,
+				SHADING: true,
+				COLORFUL: true,
+				COLOR_UPDATE_SPEED: 10,
+				PAUSED: false,
+				BACK_COLOR: { r: 30, g: 31, b: 33 },
+				TRANSPARENT: false,
+				BLOOM: true,
+				BLOOM_ITERATIONS: 8,
+				BLOOM_RESOLUTION: 256,
+				BLOOM_INTENSITY: 0.4,
+				BLOOM_THRESHOLD: 0.8,
+				BLOOM_SOFT_KNEE: 0.7,
+				SUNRAYS: true,
+				SUNRAYS_RESOLUTION: 196,
+				SUNRAYS_WEIGHT: 1.0,
+			}
+		</script>
+		<script src="js/main.js"></script>
+		<script src="js/background.js"></script>
+	</main>
+</body>
