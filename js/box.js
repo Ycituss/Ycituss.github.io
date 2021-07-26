@@ -1,1 +1,0 @@
-function error(){alert("下载功能维护中，请联系开发者");}
