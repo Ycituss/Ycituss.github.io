@@ -1,5 +1,5 @@
 function error(){alert("下载功能维护中，请联系开发者");}
-function csdn(){window.open("https://me.csdn.net/qq_43106321")}
+function blog(){window.open("https://46510054.cpolar.io")}
 function bilibili(){window.open("https://space.bilibili.com/148142151")}
 function file(){window.open("file/myapp.html" )}
 function game(){window.open("game/index.html")}
