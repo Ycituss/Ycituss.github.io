@@ -315,7 +315,7 @@
 <li><strong>使用时将mirai.jar文件放入plugins文件夹，重启Mirai</strong></li>
 <li><strong>配置文件位于config文件夹下的Setu文件夹中</strong></li>
 <li><strong>第一次用在配置文件里手动更改botAdministrators项，改为自己的QQ号</strong></li>
-<li><strong>3.0.0版本对配置文件进行结构调整,低版本升级请删除原来的配置文件</strong></li>
+<li><strong>3.0.0版本对配置文件进行结构调整,低版本升级请删除原来的配置文件;3.0.0之后的版本即可在版本更新时自动更新配置文件.</strong></li>
 </ul>
 <h2><a id="user-content-指令说明" class="anchor" aria-hidden="true" href="#指令说明"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>指令说明</h2>
 <ul>
@@ -349,9 +349,24 @@
 <td></td>
 </tr>
 <tr>
+<td>设置默认色图画质</td>
+<td>super set imageQuality 2</td>
+<td>可选参数有0,1,2,3,4;初始设置为2</td>
+</tr>
+<tr>
+<td>打开本群随机图片发送</td>
+<td>super open (all)</td>
+<td>(all)为可选参数，表示全局开启或关闭</td>
+</tr>
+<tr>
+<td>关闭本群随机图片发送</td>
+<td>super close (all)</td>
+<td></td>
+</tr>
+<tr>
 <td>打开本群随机色图</td>
 <td>super open setu (all)</td>
-<td>(all)为可选参数，表示全局开启或关闭</td>
+<td></td>
 </tr>
 <tr>
 <td>关闭本群随机色图</td>
@@ -527,6 +542,7 @@ super  command  list
 </div>
 
 </readme-toc>
+
 
 
 </div>
