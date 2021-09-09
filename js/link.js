@@ -9,3 +9,4 @@ function app1(){window.open("/file/file/myapp/生成器合集.apk")}
 function mc0(){window.open("/file/file/mc/1.15.2MCDR服务端(fabric).rar")}
 function mc1(){window.open("/file/file/mc/1.16.1MCDR服务端(fabric).rar")}
 function mc2(){window.open("/file/file/mc/1.16.1(fabric)服务端.rar")}
+function mc3(){window.open("/file/file/mc/1.16.5MCDR服务端(fabric).rar")}
