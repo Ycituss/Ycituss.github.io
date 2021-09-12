@@ -10,3 +10,6 @@ function mc0(){window.open("/file/file/mc/1.15.2MCDR服务端(fabric).rar")}
 function mc1(){window.open("/file/file/mc/1.16.1MCDR服务端(fabric).rar")}
 function mc2(){window.open("/file/file/mc/1.16.1(fabric)服务端.rar")}
 function mc3(){window.open("/file/file/mc/1.16.5MCDR服务端(fabric).rar")}
+function mc4(){window.open("https://github.com/Ycituss/Ycituss.github.io/releases/download/1.0/20w14i.rar")}
+function mc5(){window.open("https://github.com/Ycituss/Ycituss.github.io/releases/download/1.0/BIT80.rar")}
+function mc6(){window.open("https://github.com/Ycituss/Ycituss.github.io/releases/download/1.0/1.16.5fabric.rar")}
