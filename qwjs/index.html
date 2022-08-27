@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<body>
+
+<div>
+//仅打开“案件查询”和“案件详情”，且案件查询在前<br>
+//案件查询调整为100条/页<br>
+//中途不能手动停止，如需停止，请刷新页面<br>
+//达到页面最后一条会自动弹窗显示“完成”<br>
+//运行键点击一次即可，请勿多次点击<br>
+
+<br>
+function get_money(num) {<br>
+  if (num < 30){<br>
+    if(document.getElementById('amount')){<br>
+      [].forEach.call(document.getElementsByTagName('input'), function(inputbox){<br>
+        if(inputbox.id == "amount"){<br>
+    	  let evt = document.createEvent('HTMLEvents');<br>
+    	  inputbox.focus();<br>
+    	  inputbox.setAttribute('value', 100);<br>
+    	  evt.initEvent('input', true, true);<br>
+    	  evt.eventType = 'message';<br>
+    	  inputbox.dispatchEvent(evt)<br>
+  	}<br>
+      });<br>
+      if(document.getElementsByClassName('ant-btn-primary')[6]){<br>
+        document.getElementsByClassName('ant-btn-primary')[6].click();<br>
+      }else{<br>
+        document.getElementsByClassName('ant-btn-primary')[5].click();<br>
+      }<br>
+//       document.getElementsByClassName('ant-btn-primary')[5].click();<br>
+      document.getElementsByClassName('ant-modal-close-x')[0].click();<br>
+      if(list_num == document.getElementsByClassName('ant-table-cell-content').length - 1){<br>
+        next_page(0);<br>
+        list_num = 1;<br>
+      } else{<br>
+        list_num++;<br>
+      }<br>
+      return;<br>
+    }<br>
+    setTimeout(function () { get_money(num) }, 500);<br>
+    num ++;<br>
+  }<br>
+}<br>
+<br>
+function next_page(num) {<br>
+//   if (num < 30){<br>
+//     if(document.getElementsByClassName('ant-notification-notice-message').length){<br>
+      setTimeout(function () {<br>
+        document.getElementsByClassName("ant-btn-sm")[1].click();<br>
+        if(document.getElementsByClassName('ant-message-notice-content').length){<br>
+					alert('完成');<br>
+      		stop_flag = 1;<br>
+				}<br>
+      }, 600);<br>
+//       return;<br>
+//     }<br>
+//     setTimeout(function () { next_page(num) }, 500);<br>
+//     num ++;<br>
+//   }<br>
+}<br>
+<br>
+function main(num) {<br>
+  if (num < times){<br>
+  console.log(num);<br>
+    if(stop_flag == 0) {<br>
+      document.getElementsByClassName('ant-table-cell-content')[list_num].firstChild.click();<br>
+      get_money(0);<br>
+    }else{<br>
+      return false;<br>
+    }<br>
+//     if(document.getElementsByClassName('ant-message-notice-content').length){<br>
+//       alert(stop_flag);<br>
+// 		}<br>
+    setTimeout(function () { main(num) }, 6000);<br>
+    num ++;<br>
+  }<br>
+}<br>
+<br>
+var stop_flag = 0;<br>
+var list_num = 1;<br>
+var times = 135;<br>
+main(0);<br>
+<br>
+</div>
+
+</body>
+
+</html>
