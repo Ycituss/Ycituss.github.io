@@ -24,11 +24,7 @@ function get_money(num) {<br>
     	  inputbox.dispatchEvent(evt)<br>
   	}<br>
       });<br>
-      if(document.getElementsByClassName('ant-btn-primary')[6]){<br>
-        document.getElementsByClassName('ant-btn-primary')[6].click();<br>
-      }else{<br>
-        document.getElementsByClassName('ant-btn-primary')[5].click();<br>
-      }<br>
+      document.getElementsByClassName('ant-btn-primary')[document.getElementsByClassName('ant-btn-primary').length-1].click();<br>
 //       document.getElementsByClassName('ant-btn-primary')[5].click();<br>
       document.getElementsByClassName('ant-modal-close-x')[0].click();<br>
       if(list_num == document.getElementsByClassName('ant-table-cell-content').length - 1){<br>
