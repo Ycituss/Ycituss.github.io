@@ -60,12 +60,12 @@ function next_page(num) {<br>
 function main(num) {<br>
   if (num < times){<br>
     console.log(num);<br>
-    if(num == times-1){
-	alert('跑完了，但没完全跑完');
-    }
     if(stop_flag == 0) {<br>
       document.getElementsByClassName('ant-table-cell-content')[list_num].firstChild.click();<br>
       get_money(0);<br>
+      if(num == times-1){<br>
+	alert('跑完了，但没完全跑完');<br>
+      }<br>
     }else{<br>
       return false;<br>
     }<br>
