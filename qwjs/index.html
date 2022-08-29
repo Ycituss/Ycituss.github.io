@@ -64,7 +64,7 @@ function main(num) {<br>
       document.getElementsByClassName('ant-table-cell-content')[list_num].firstChild.click();<br>
       get_money(0);<br>
       if(num == times-1){<br>
-	alert('跑完了，但没完全跑完');<br>
+	setTimeout(function () { alert('跑完了，但没完全跑完') }, 2000);<br>
       }<br>
     }else{<br>
       return false;<br>
