@@ -68,8 +68,14 @@ num ++;
 }
 }
 
+
+function begin(){  
 var stop_flag = 0;
 var list_num = 1;
 var times = 135;
 main(0);
+}
 
+function stop(){
+  stop_flag = 1;
+}
