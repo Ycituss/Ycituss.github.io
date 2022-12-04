@@ -13,3 +13,7 @@ function mc3(){window.open("/file/file/mc/1.16.5MCDR服务端(fabric).rar")}
 function mc4(){window.open("https://github.com/Ycituss/Ycituss.github.io/releases/download/1.0/20w14i.rar")}
 function mc5(){window.open("https://github.com/Ycituss/Ycituss.github.io/releases/download/1.0/BIT80.rar")}
 function mc6(){window.open("https://github.com/Ycituss/Ycituss.github.io/releases/download/1.0/1.16.5fabric.rar")}
+function voice0(){window.open("/file/file/voice/佳佳.mp3")}
+function voice1(){window.open("/file/file/voice/水水的加油.mp3")}
+function voice2(){window.open("/file/file/voice/水水的加油(互动版).mp3")}
+function voice3(){window.open("/file/file/voice/皮卡的笑.mp3")}
