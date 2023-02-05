@@ -11,21 +11,34 @@
     </style>
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <title>MediaElement.js - HTML5 video and audio unification framework</title>
-        <meta name="description" content="HTML5 video and audio player with support for YouTube, SoundCloud, Facebook, Vimeo, HLS, Dash, and others."/>
-        <meta name="keywords" content="HTML5, video, H.264, Javascript, media, mp3, mp4"/>
+    <title>MediaElement.js - HTML5 video and audio unification framework</title>
+    <meta name="description"
+        content="HTML5 video and audio player with support for YouTube, SoundCloud, Facebook, Vimeo, HLS, Dash, and others." />
+    <meta name="keywords" content="HTML5, video, H.264, Javascript, media, mp3, mp4" />
 
-        <!-- fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i">
 
-        <!-- site -->
-        <link rel="stylesheet" href="css/mejs-site.css">
+    <!-- site -->
+    <link rel="stylesheet" href="css/mejs-site.css">
 
-        <!-- library -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css">
+    <!-- library -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelementplayer.min.css">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8133a7422aa2b4db7cc954bcbe737833";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
 
 </head>
 
@@ -60,7 +73,7 @@
                     <td><audio controls>
                             <source src="/file/file/voice/佳佳.mp3">
                         </audio></td>
-                    <td><a href="#" download="/file/file/voice/佳佳.mp3"" style="cursor:pointer">Download</a></td>
+                    <td><a href="#" download="/file/file/voice/佳佳.mp3"" style=" cursor:pointer">Download</a></td>
                     <td>2022-12-05 06:08:35</td>
                 </tr>
                 <tr class="tr_mod_entry_even">
@@ -134,70 +147,70 @@
     <script src="../js/link.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/mediaelement-and-player.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/dailymotion.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/facebook.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/soundcloud.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/twitch.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/vimeo.min.js"></script>
-        <script src="https://buttons.github.io/buttons.js"></script>
-        <script src="https://platform.twitter.com/widgets.js"></script>
-        <script>
+    <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/dailymotion.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/facebook.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/soundcloud.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/twitch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/renderers/vimeo.min.js"></script>
+    <script src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script>
 
-            var
-                sourcesSelector = document.body.querySelectorAll('select'),
-		        sourcesTotal = sourcesSelector.length
+        var
+            sourcesSelector = document.body.querySelectorAll('select'),
+            sourcesTotal = sourcesSelector.length
             ;
 
-            for (var i = 0; i < sourcesTotal; i++) {
-                sourcesSelector[i].addEventListener('change', function (e) {
-                    var
-                        media = e.target.closest('.media-container').querySelector('.mejs__container').id,
-                        player = mejs.players[media]
+        for (var i = 0; i < sourcesTotal; i++) {
+            sourcesSelector[i].addEventListener('change', function (e) {
+                var
+                    media = e.target.closest('.media-container').querySelector('.mejs__container').id,
+                    player = mejs.players[media]
                     ;
 
-                    player.setSrc(e.target.value.replace('&amp;', '&'));
-                    player.setPoster('');
-                    player.load();
+                player.setSrc(e.target.value.replace('&amp;', '&'));
+                player.setPoster('');
+                player.load();
 
-                });
+            });
 
-                // These media types cannot play at all on iOS, so disabling them
-                if (mejs.Features.isiOS) {
-			        if (sourcesSelector[i].querySelector('option[value^="rtmp"]')) {
-                        sourcesSelector[i].querySelector('option[value^="rtmp"]').disabled = true;
-                    }
-                    if (sourcesSelector[i].querySelector('option[value$="webm"]')) {
-                        sourcesSelector[i].querySelector('option[value$="webm"]').disabled = true;
-                    }
-                    if (sourcesSelector[i].querySelector('option[value$=".mpd"]')) {
-                        sourcesSelector[i].querySelector('option[value$=".mpd"]').disabled = true;
-                    }
-			        if (sourcesSelector[i].querySelector('option[value$=".ogg"]')) {
-                        sourcesSelector[i].querySelector('option[value$=".ogg"]').disabled = true;
-                    }
-			        if (sourcesSelector[i].querySelector('option[value$=".flv"]')) {
-                        sourcesSelector[i].querySelector('option[value*=".flv"]').disabled = true;
-        		    }
+            // These media types cannot play at all on iOS, so disabling them
+            if (mejs.Features.isiOS) {
+                if (sourcesSelector[i].querySelector('option[value^="rtmp"]')) {
+                    sourcesSelector[i].querySelector('option[value^="rtmp"]').disabled = true;
+                }
+                if (sourcesSelector[i].querySelector('option[value$="webm"]')) {
+                    sourcesSelector[i].querySelector('option[value$="webm"]').disabled = true;
+                }
+                if (sourcesSelector[i].querySelector('option[value$=".mpd"]')) {
+                    sourcesSelector[i].querySelector('option[value$=".mpd"]').disabled = true;
+                }
+                if (sourcesSelector[i].querySelector('option[value$=".ogg"]')) {
+                    sourcesSelector[i].querySelector('option[value$=".ogg"]').disabled = true;
+                }
+                if (sourcesSelector[i].querySelector('option[value$=".flv"]')) {
+                    sourcesSelector[i].querySelector('option[value*=".flv"]').disabled = true;
                 }
             }
+        }
 
-            document.addEventListener('DOMContentLoaded', function() {
-                var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+        document.addEventListener('DOMContentLoaded', function () {
+            var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
 
-                for (var i = 0; i < total; i++) {
-                    new MediaElementPlayer(mediaElements[i], {
-                        pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/',
-                        shimScriptAccess: 'always',
-                        success: function () {
-                            var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
-                            for (var j = 0; j < targetTotal; j++) {
-                                target[j].style.visibility = 'visible';
-                            }
-			            }
-		            });
-                }
-            });
-        </script>
+            for (var i = 0; i < total; i++) {
+                new MediaElementPlayer(mediaElements[i], {
+                    pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.16/build/',
+                    shimScriptAccess: 'always',
+                    success: function () {
+                        var target = document.body.querySelectorAll('.player'), targetTotal = target.length;
+                        for (var j = 0; j < targetTotal; j++) {
+                            target[j].style.visibility = 'visible';
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 
