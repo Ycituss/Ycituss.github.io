@@ -1,5 +1,5 @@
 function error(){alert("下载功能维护中，请联系开发者");}
-function blog(){window.open("https://blog.ycitus.cn")}
+function blog(){window.open("https://blog.csdn.net/qq_43106321")}
 function bilibili(){window.open("https://space.bilibili.com/148142151")}
 function file(){window.open("file/myapp.html" )}
 function game(){window.open("https://wiki.mc.bitnp.net/")}
