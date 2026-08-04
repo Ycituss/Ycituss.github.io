@@ -4,6 +4,7 @@ function bilibili(){window.open("https://space.bilibili.com/148142151")}
 function file(){window.open("file/myapp.html" )}
 function game(){window.open("https://wiki.mc.bitnp.net/")}
 function other(){window.open("other/index.html")}
+function api(){window.open("api/index.html")}
 function app0(){window.open("/file/file/myapp/Let`s go fishing.apk")}
 function app1(){window.open("/file/file/myapp/生成器合集.apk")}
 function mc0(){window.open("/file/file/mc/1.15.2MCDR服务端(fabric).rar")}
