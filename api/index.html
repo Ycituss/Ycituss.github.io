@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的导航</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="heading">
+        <h1 id="page-title">我的导航</h1>
+        <p id="page-subtitle" class="subtitle"></p>
+      </div>
+      <button id="theme-toggle" class="theme-btn" title="切换主题" aria-label="切换主题">🌙</button>
+    </header>
+
+    <div class="toolbar">
+      <input id="search" type="text" placeholder="搜索网站…" autocomplete="off" />
+      <span id="count-tip"></span>
+    </div>
+
+    <main id="content"></main>
+
+    <p class="hint">
+      提示：鼠标悬停卡片右上角出现 <code>☆</code> 即可「置顶常用」；按住卡片可<strong>拖拽排序</strong>（同组内）。
+      排序与置顶仅保存在本浏览器，新增网站请编辑 <code>config.js</code>。
+    </p>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

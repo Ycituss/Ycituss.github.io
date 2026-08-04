@@ -1,0 +1,262 @@
+/* =========================================================
+ * 样式 —— 在原有基础上增加了拖拽与星标相关样式
+ * ========================================================= */
+
+:root {
+  --bg: #f6f7f9;
+  --fg: #1f2329;
+  --muted: #8a9099;
+  --card: #ffffff;
+  --card-border: #ececef;
+  --card-hover: #f0f5ff;
+  --card-hover-border: #c9dcff;
+  --accent: #3b6cff;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 6px 20px rgba(59, 108, 255, 0.12);
+}
+
+[data-theme="dark"] {
+  --bg: #16181d;
+  --fg: #e8eaed;
+  --muted: #8a9099;
+  --card: #20232a;
+  --card-border: #2c2f37;
+  --card-hover: #232a3a;
+  --card-hover-border: #3a5680;
+  --accent: #6f9bff;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+#theme-toggle {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+#theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+#search {
+  flex: 1;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  color: var(--fg);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+#search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(59, 108, 255, 0.12);
+}
+
+#count-tip {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+  padding-right: 2px;
+}
+
+.group-title {
+  margin: 30px 4px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--fg);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease, background 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: var(--card-hover);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-hover);
+}
+
+.card.dragging {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.card.drop-before {
+  box-shadow: -3px 0 0 0 var(--accent), var(--shadow);
+}
+.card.drop-after {
+  box-shadow: 3px 0 0 0 var(--accent), var(--shadow);
+}
+
+.icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+  overflow: hidden;
+  background: var(--accent);
+}
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-text {
+  min-width: 0;
+  flex: 1;
+}
+.card-name {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-desc {
+  margin-top: 3px;
+  font-size: 12.5px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.star {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.card:hover .star {
+  opacity: 1;
+}
+.star:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+[data-theme="dark"] .star:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.star.pinned {
+  color: #f5b400;
+  opacity: 1;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 60px 0;
+  font-size: 15px;
+}
+
+.hint {
+  margin: 26px 4px 0;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.hint code {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
